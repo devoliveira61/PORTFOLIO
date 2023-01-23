@@ -6,10 +6,11 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
-body{
-background-color: green;
+body {
+  background-color: #242424;
 }
 
 /* Mudando a cor da barra de rolagem */
@@ -62,7 +63,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   height: 8vh;
-  padding: 0 30px;
+  padding: 0 90px;
   box-shadow: 0 0.1rem 0.3rem rgba(204, 204, 204, 0.315);
   width: 100%;
   background: #242424;
@@ -112,6 +113,9 @@ nav {
 /* Menu Responsivo */
 
 @media (max-width: 785px) {
+  section .content {
+    padding: 20px !important;
+  }
   .navigation {
     padding: 18px 20px;
   }
@@ -188,7 +192,7 @@ nav {
 section .content {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 90px;
   align-items: center;
   height: 100%;
 }
@@ -266,31 +270,148 @@ input[type="button"]:active {
 }
 
 section.about {
-    background-image: linear-gradient(#242424ec, #242424e7),
+  background-image: linear-gradient(#242424ec, #242424e7),
     url("/src/img/about.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 30vh; */
 }
 
-section.projects {
-    background-image: linear-gradient(#242424ec, #242424e7),
-    url("/src/img/projects.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  color: #fff;
+section.about .container__about {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tecnologias img {
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+section.about .container__about .tecnologias {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.tecnologias img:hover {
+  transform: scale(1.1);
+}
+
+section.about .container__about .tecnologias img {
+  margin: 5px;
+}
+
+.container__about h1 {
+  color: rgba(255, 255, 255, 0.671);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.container__about p {
+  color: #d9edffa4;
+  font-weight: 300;
+  max-width: 600px;
+}
+
+.container__about h2 {
+  color: rgba(255, 255, 255, 0.671);
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.container__about img {
+  max-width: 50px;
 }
 
 section.contact {
-    background-image: linear-gradient(#242424ec, #242424e7),
+  background-image: linear-gradient(#242424ec, #242424e7),
     url("/src/img/contact.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   color: #fff;
+}
+
+/* Sobre Responsivo */
+
+@media (max-width: 785px) {
+  .container__about p {
+    color: #d9edffa4;
+    font-weight: 300;
+    max-width: 400px;
+  }
+}
+
+section.projects {
+  background-image: linear-gradient(#242424ec, #242424e7),
+    url("/src/img/projects.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects .container__project {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container__project img {
+  width: 300px;
+  border-radius: 4px;
+  object-fit: contain;
+  margin: 10px;
+}
+
+.container__project p {
+  max-width: 300px;
+  text-align: center;
+  font-size: 12px;
+  color: #d9edff;
+}
+
+.container__project i {
+  font-size: 20px;
+  color: #fff;
+  margin: 5px;
+  display: flex;
+}
+
+.container__project .acesse {
+  display: flex;
+}
+
+.container__project .project_one {
+  margin: 20px;
+}
+
+/* Responsivo Projetos */
+@media (max-width: 785px) {
+  .container__project img {
+    width: 120px;
+    text-align: center;
+  }
+
+  .project_one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
